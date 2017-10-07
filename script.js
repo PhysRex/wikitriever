@@ -118,11 +118,11 @@ $(document).ready( function() {
 				$descriptElem.addClass("fadeInLeft");
 				
 				var $linkElem1 = $("<a></a>").attr("href", wikiURL + title);
-				var $linkElem2 = $("<a></a>").attr("href", wikiURL + title);
+				var $divElem = $("<div></div>").attr("class", "linkClass");
 				
-				$linkElem1.append($titleElem[0]);
-				$linkElem2.append($descriptElem[0]);
-				$listElem.append($linkElem1[0], $linkElem2[0]);
+				$divElem.append($titleElem[0]).append($descriptElem[0]);
+				$linkElem1.append($divElem);
+				$listElem.append($linkElem1[0]);
 				
 				if (!$listElem.hasClass("listClass")) {
 					$listElem.addClass("listClass");
